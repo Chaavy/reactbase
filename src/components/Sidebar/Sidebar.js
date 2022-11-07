@@ -118,10 +118,10 @@ const linksArray = [
         notification: 0,
     },
     {
-        label: "Statistics",
+        label: "Movies",
         icon: <MdOutlineAnalytics />,
-        to: "/statistics",
-        notification: 3,
+        to: "/movies",
+        notification: 0,
     },
     {
         label: "Customers",

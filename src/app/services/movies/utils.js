@@ -1,0 +1,1 @@
+export const MOVIES = 'https://ghibliapi.herokuapp.com/films';

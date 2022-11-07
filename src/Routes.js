@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import Movies from "./pages/Movies";
 
 const Routes = () => {
     return (
@@ -8,8 +9,8 @@ const Routes = () => {
             <Route exact path="/">
                 <HomePage />
             </Route>
-            <Route exact path="/statistics">
-                <h1>Statistics Page</h1>
+            <Route exact path="/movies">
+                <Movies/>
             </Route>
             <Route exact path="/customers">
                 <h1>Customers Page</h1>
