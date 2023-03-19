@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { ThemeProvider } from "styled-components";
-import Layout from "./components/Layout/Layout";
-import Routes from "./Routes";
+import AppRouter from "./Routes";
 import { GlobalStyle } from "./styles/globalStyles";
 import { darkTheme, lightTheme } from "./styles/theme";
 
@@ -26,9 +25,9 @@ const App = () => {
                     />
                 </Helmet>
                 <>
-                    <Layout>
-                        <Routes />
-                    </Layout>
+                    {/* <Layout> */}
+                        <AppRouter />
+                    {/* </Layout> */}
                 </>
             </ThemeProvider>
         </ThemeContext.Provider>
