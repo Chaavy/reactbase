@@ -7,7 +7,7 @@ import Movies from "./pages/Movies";
 
 const AppRouter = () => {
   const AuthenticatedRoute = ({ children }) => {
-    const isAuthenticated = true;
+    const isAuthenticated = false;
     if (isAuthenticated) return children;
     return <Navigate to="/" />;
   };
@@ -22,9 +22,9 @@ const AppRouter = () => {
           <Route
             path="/home"
             element={
-              <npm >
+              <AuthenticatedRoute >
                 <HomePage />
-              </npm>
+              </AuthenticatedRoute>
             }
           />
           <Route
@@ -56,6 +56,7 @@ const AppRouter = () => {
             }
           />
 
+        <Route path="/*" element={<h1>ESTA PAGINA NO EXISTE</h1>} />
         </Routes>
       </Layout>
     </>
