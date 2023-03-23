@@ -114,7 +114,7 @@ const linksArray = [
     {
         label: "Home",
         icon: <AiOutlineHome />,
-        to: "/",
+        to: "/home",
         notification: 0,
     },
     {
@@ -144,6 +144,7 @@ const secondaryLinksArray = [
     },
     {
         label: "Logout",
+        to: "/login",
         icon: <MdLogout />,
     },
 ];
