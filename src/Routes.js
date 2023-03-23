@@ -60,20 +60,6 @@ const AppRouter = () => {
         </Routes>
       </Layout>
     </>
-    // <Switch>
-    //     <Route exact path="/">
-    //         <HomePage />
-    //     </Route>
-    //     <Route exact path="/movies">
-    //         <Movies/>
-    //     </Route>
-    //     <Route exact path="/customers">
-    //         <h1>Customers Page</h1>
-    //     </Route>
-    //     <Route exact path="/diagrams">
-    //         <h1>Diagrams Page</h1>
-    //     </Route>
-    // </Switch>
   );
 };
 
