@@ -25,9 +25,7 @@ const App = () => {
                     />
                 </Helmet>
                 <>
-                    {/* <Layout> */}
-                        <AppRouter />
-                    {/* </Layout> */}
+                    <AppRouter />
                 </>
             </ThemeProvider>
         </ThemeContext.Provider>
