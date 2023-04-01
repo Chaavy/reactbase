@@ -1,9 +1,16 @@
 const initialState = {
     Movies: [],
-    Series: []
+    Series: [],
+    Juan: []
 };
 
-const moviesReducer = (state = initialState, action = {}) => {
+const initialState2 = {
+    Authorization: {
+      validToken: true
+    }
+};
+
+const moviesReducer = (state = initialState2, action = {}) => {
   switch (action.type) {
     case "MOVIES":
       return { ...state, Movies: action.value };

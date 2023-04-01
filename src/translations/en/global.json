@@ -1,0 +1,9 @@
+{
+    "header": {
+        "hello-world": "Login",
+        "AutMessage": "Authenticated failed. Please check your credentials.",
+        "UserNameText": "User Name:",
+        "PasswordText": "Password:",
+        "LoginText": "Login"
+    }
+}

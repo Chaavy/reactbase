@@ -6,8 +6,11 @@ import { LoginPage } from "./pages/Login/LoginPage";
 import Movies from "./pages/Movies";
 
 const AppRouter = () => {
+
   const AuthenticatedRoute = ({ children }) => {
-    const isAuthenticated = false;
+    //Bandera en true para loggearte. Cambiar por llamado a API.
+    const isAuthenticated = true;
+
     if (isAuthenticated) return children;
     return <Navigate to="/" />;
   };
