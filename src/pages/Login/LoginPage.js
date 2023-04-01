@@ -1,12 +1,17 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { GetAuthorizationAction } from '../../app/store/authorization/authorizationAction';
 
 
 export const LoginPage = () => {
+  const dispatch = useDispatch();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const navigate = useNavigate();
+  const [t, i18n] = useTranslation("global");
   // const { login } = useAuth();
 
   const handleUserNameChange = (event) => {
@@ -23,27 +28,27 @@ export const LoginPage = () => {
     setShowErrorMessage(false);
   };
 
-  const handleOnClickLogin = () => {
-
-    if (userName ==='juan' && password === '123') {
-      navigate('/home');
-      // navigate(/welcome/${userName});
-    } else {
-      setShowErrorMessage(true);
-    }
-  };
+  const handleOnClickLogin = () =>
+    GetAuthorizationAction(userName, password, dispatch)
+      ? navigate('/home') : setShowErrorMessage(true);
+  
 
   return (
+    
+
     <div className="Login">
-    <h1>Login</h1>
+    <button onClick={()=> i18n.changeLanguage("es")}>ES</button>
+    <button onClick={()=> i18n.changeLanguage("en")}>EN</button>
+    <br/>
+    {t("header.hello-world")}
     {showErrorMessage && (
       <div className="successMessage">
-        Authenticated failed. Please check your credentials.
+        {t("header.AutMessage")}
       </div>
     )}
     <div className="LoginForm">
       <div>
-        <label>User Name:</label>
+      {t("header.UserNameText")}
         <input
           type="text"
           name="username"
@@ -52,7 +57,7 @@ export const LoginPage = () => {
         />
       </div>
       <div>
-        <label>Password:</label>
+      {t("header.PasswordText")}
         <input
           type="password"
           name="password"
@@ -62,7 +67,7 @@ export const LoginPage = () => {
       </div>
       <div>
         <button type="button" name="Login" onClick={handleOnClickLogin}>
-          Login
+        {t("header.LoginText")}
         </button>
       </div>
     </div>

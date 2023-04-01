@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import moviesReducer from './demoStore/peliculasReducer'
+import authorizationReducer from './authorization/authorizationReducer'
+// import moviesReducer from './demoStore/peliculasReducer'
+
 
 export default configureStore({
   reducer: {
-    Movies: moviesReducer
+    // Movies: moviesReducer
+    Authorization: authorizationReducer
   },
 })

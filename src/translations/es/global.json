@@ -1,0 +1,9 @@
+{
+    "header": {
+        "hello-world": "Iniciar Sesion",
+        "AutMessage": "Autenticacion fallida. Favor de revisar las credenciales.",
+        "UserNameText": "Usuario:",
+        "PasswordText": "Contrasena:",
+        "LoginText": "Inicia"
+    }
+}

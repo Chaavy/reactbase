@@ -1,12 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Sidebar from "../Sidebar/Sidebar";
 import { SLayout, SMain } from "./styles";
 
 const Layout = ({ children }) => {
-  const isAuthenticated = false;
+  const {validToken} = useSelector(state => state?.Authorization);
   return (
     <SLayout>
-      {isAuthenticated && (
+      {validToken && (
         <>
           <Sidebar />
         </>
