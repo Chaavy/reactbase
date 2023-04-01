@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 import AppRouter from "./Routes";
 import { GlobalStyle } from "./styles/globalStyles";
 import { darkTheme, lightTheme } from "./styles/theme";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const ThemeContext = React.createContext(null);
 

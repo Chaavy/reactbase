@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+
 
 
 export const LoginPage = () => {
@@ -25,7 +26,7 @@ export const LoginPage = () => {
 
   const handleOnClickLogin = () => {
 
-    if (userName ==='juan' && password === '123') {
+    if (userName === 'juan' && password === '123') {
       navigate('/home');
       // navigate(/welcome/${userName});
     } else {
@@ -34,39 +35,54 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="Login">
-    <h1>Login</h1>
-    {showErrorMessage && (
-      <div className="successMessage">
-        Authenticated failed. Please check your credentials.
-      </div>
-    )}
-    <div className="LoginForm">
-      <div>
-        <label>User Name:</label>
-        <input
-          type="text"
-          name="username"
-          value={userName}
-          onChange={handleUserNameChange}
-        />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-      </div>
-      <div>
-        <button type="button" name="Login" onClick={handleOnClickLogin}>
-          Login
-        </button>
-      </div>
+    <div className="container mt-3">
+      <h1  class="display-1">Login</h1>
+      {showErrorMessage && (
+        <div className="successMessage">
+          Authenticated failed. Please check your credentials.
+        </div>
+      )}
+
+      <form action="/action_page.php">
+        <div>
+          <div class="mb-3 mt-3">
+            <label class="form-label" >User Name:</label>
+            <input
+              class="form-control"
+              type="text"
+              name="username"
+              value={userName}
+              onChange={handleUserNameChange}
+            />
+          </div>
+          <div class="mb-3">
+            <label>Password:</label>
+            <input
+              class="form-control"
+              type="password"
+              name="password"
+              value={password}
+              onChange={handlePasswordChange}
+            />
+          </div>
+          <div class="form-check mb-3">
+            <label class="form-check-label">
+              <input
+                class="form-check-label"
+                type="checkbox"
+                name="remember"
+              /> Remember me
+            </label>
+          </div>
+          <div>
+            <button className='btn btn-primary' type="button" name="Login" onClick={handleOnClickLogin}>
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+
     </div>
-  </div>
   )
 };
 
